@@ -2,7 +2,7 @@
 
 Welcome to **Reacting Favourites**! This project is a simple React web application that allows users to add or remove songs from their favorites list with ease. It features a clean UI and dynamically updates the favorite count in the navigation bar.
 
-![Project Screenshot](./Screenshot 2024-10-21 183223.png)
+![Project Screenshot](./Screenshot%202024-10-21%20183223.png)
 ![Project Screenshot](./screenshot2.png)
 ## ✨ Features
 
