@@ -1,12 +1,16 @@
-const Card = () => {
+const Card = ({ data }) => {
+  const { image, name, artist, added } = data
   return (
-    <div className="parent-div w-60 bg-zinc-100 p-4 rounded-md flex gap-4 pb-8 relative">
-      <div className="song-icon w-20 h-20 bg-orange-600 rounded-md"></div>
-      <div className="artisi-song-name">
-        <h3 className="text-xl leading-none font-semibold">Song Name</h3>
-        <h6 className="text-sm">Arist</h6>
+    <div className="parentdiv w-60 bg-[#ECDFCC] p-4 rounded-md flex gap-4 pb-8 relative mt-10">
+      <div className="songIcon w-20 h-20 bg-orange-600 rounded-md overflow-hidden">
+        <img src={image} className="w-full h-full " />
       </div>
-      <button className="px-3 py-2 bg-orange-600 rounded-full absolute whitespace text-zinc-100 text-xs bottom-0 translate-y-[50%] left-1/2 -translate-x-[50%]">Add To Favourites</button>
+      <div className="artisi-song-name">
+        <h3 className="text-xl leading-none font-semibold">{name}</h3>
+        <h6 className="text-sm">{artist}</h6>
+      </div>
+      <button className={`px-3 py-2 ${!added ? "bg-[#DA8359]" : "bg-[#A5B68D]"} rounded-full absolute whitespace text-zinc-100 text-xs bottom-0 translate-y-[50%] left-1/2 -translate-x-[50%]`}>{!added ? "Add to Favourites" : "Favourite"}</button>
+
     </div>
   );
 };
